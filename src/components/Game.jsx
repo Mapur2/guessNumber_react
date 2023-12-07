@@ -12,7 +12,7 @@ function Game() {
     const [num, setNum] = useState("")
     const max = 10 * (lv)
     const [guessNumber] = useState(guessnumber(max))
-    console.log("guess number  ", guessNumber)
+    //console.log("guess number  ", guessNumber)
     const [tries, setTry] = useState([])
 
     const handleSubmit = (e) => {
@@ -29,12 +29,12 @@ function Game() {
             setEnd(true)
             return
         }
-        setNum("")
-        if (num == "") {
+        
+        if (num == "" || (num>='a' && num<='z')) {
             alert(`Enter a number between 1 and ${max}`)
             return
         }
-        if (num < 1 || num > max) {
+        if ((num < 1 || num > max)) {
             alert(`Enter a number between 1 and ${max}`)
             return
         }
@@ -43,7 +43,7 @@ function Game() {
         else
             setTry([`${num} is higher than the guess number`, ...tries])
         setGuess(guess - 1)
-        console.log(tries)
+        setNum("")
     }
 
     return (

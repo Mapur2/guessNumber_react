@@ -12,9 +12,9 @@ function Select() {
 
   return (
     <div>
-      <div className='mx-auto shadow p-5 border bg-body-tertiary rounded d-flex flex-column '>
+      <div className='mx-auto shadow p-5 border bg-body-tertiary rounded d-flex flex-column flex-wrap '>
         <h1 >Guess the number</h1>
-        <div className='m-2 d-flex flex-column mx-5 justify-content-center '>
+        <div className='m-2 d-flex flex-column flex-wrap mx-5 justify-content-center '>
           <h4>Select your level</h4>
           <select name="" id="" className=' rounded bg-dark text-light my-3 py-3 text-center' onChange={(e) => setLevel(e.target.value)}>
             <option value={1} >Level 1 </option>
